@@ -1,0 +1,12 @@
+USERNAME=
+PASSWORD=
+
+<!-- 2 Ways to do this
+1) create your own env file and paste the above into it and add your own credentials into your .bash_profile . 
+2) Paste the below code snippet into your src 
+from decouple import config
+
+userID = config('userID',default='')
+password = config('password',default='')
+
+print(userID, password) -->
