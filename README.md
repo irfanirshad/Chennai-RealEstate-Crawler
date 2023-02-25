@@ -1,6 +1,8 @@
 # ChennaiRealEstateCrawler
 
-This is a Python-based web scraper that extracts information on commercial properties from Magicbricks.com and 99acres.com for SNE, a real estate company based in Chennai, Tamil Nadu, India. The scraper is designed to collect data on properties that match the profile of the target clients to whom SNE leases commercial properties, such as IT offices, factories, showrooms etc
+This is a Python-based web scraper that extracts information on commercial properties from Magicbricks.com and 99acres.com for SNE, a real estate company based in Chennai, Tamil Nadu, India. The scraper is designed to collect data on properties that match the profile of the target clients to whom SNE leases commercial properties, such as IT offices, factories, showrooms etc.
+
+This project follows the Strategy Design Pattern, where the strategies followed in this case involve scraping either MagicBricks.com or 99Acres.com. The corresponding service is then called to perform the required scraping task for you.
 
 ## Requirements
 
