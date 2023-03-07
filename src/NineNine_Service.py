@@ -1,3 +1,5 @@
+from IServiceStrategy import ScrapingStrategy
+
 from tokenize import String
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
@@ -15,17 +17,20 @@ import os
 COUNT_PRIME = 0
 
 URL_MAP = {
-    'url_login': "https://accounts.magicbricks.com/userauth/login",
-    'url_main': "https://www.magicbricks.com/property-for-rent/commercial-real-estate?bedroom=&proptype=Commercial-Office-Space,Office-ITPark-SEZ&cityName=West-area-Chennai"
+    'url_login': "https://www.99acres.com/",
+    'url_main': "https://www.99acres.com/property-in-chennai-ffid"
 }
 
-class MagicBricksService(object):
-    """MagicBricksService Scraping Service"""
+class NineNineService(ScrapingStrategy):
+    """99Acres Scraping Service"""
     def __init__(self):
         self.driver = None
         self.listing_list1= defaultdict(list)
         self.final_listing_list = []
         self.prime_set = set(String)
+
+    def print_strategy(self):
+        print("Initiating 99Acres Scraping Strategy")
 
     def set_options(self):
         """Options for selenium.webdriver"""

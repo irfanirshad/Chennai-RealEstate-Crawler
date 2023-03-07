@@ -1,8 +1,13 @@
-from src.v2 import MagicBricksService
+import sys
+sys.path.append("/Users/aaaii/playGROUND/github_repos/selenium_scraper/")
+
+from src import MB_Service, NineNine_Service, IServiceStrategy
+
+
 
 def main_function():
     """Test Driver/Client function"""
-    driver_obj = MagicBricksService()
+    driver_obj = ScrapingStrategy(MB_Service)
     driver_obj.launch_driver()
     driver_obj.login_complete()
     driver_obj.setup_filters()
